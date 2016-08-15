@@ -117,9 +117,11 @@ class CompaniesController extends AppController{
 
 		$this->Company->locale = Configure::read('Config.language');
 		$this->Company->bindTranslation(array('title' => 'titleTranslation'));
-
+		$companies = $this->Company->find('all');
 		$data = $this->Company->findById($id);
 		$title_for_layout = $data['Company']['title'];
-		$this->set(compact('data', 'title_for_layout'));
+		$meta['keywords'] = $data['Company']['keywords'];
+		$meta['description'] = $data['Company']['description'];
+		$this->set(compact('data', 'title_for_layout', 'companies', 'meta'));
 	}
 }

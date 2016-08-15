@@ -11,6 +11,8 @@ echo $this->Form->input('title', array('label' => 'Название:'));
 <?php endif ?>
 <?php
 echo $this->Form->input('body', array('label' => 'Текст:', 'id' => 'editor'));
+echo $this->Form->input('link', array('label' => 'Ссылка:'));
+echo $this->Form->input('map', array('label' => 'Карта:'));
 echo $this->Form->input('address', array('label' => 'Адрес:'));
 echo $this->Form->input('phone', array('label' => 'Телефон:'));
 echo $this->Form->input('email', array('label' => 'E-mail:'));
