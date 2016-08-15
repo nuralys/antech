@@ -2,9 +2,9 @@
 	<canvas id="demo-canvas"></canvas>
 	<div class="cr">
 		<ul class="lang">
-			<li><a href="#">kz</a></li>
-			<li class="active"><a href="#">ru</a></li>
-			<li><a href="#">en</a></li>
+			<li <?= (Configure::read('Config.language') == 'kz')? "class='active'" : "" ?>><a href="/kz">kz</a></li>
+			<li <?= (Configure::read('Config.language') == 'ru')? "class='active'" : "" ?>><a href="/">ru</a></li>
+			<li <?= (Configure::read('Config.language') == 'en')? "class='active'" : "" ?>><a href="/en">en</a></li>
 		</ul>
 		<div class="h_center">
 			<a class="logo" href="/<?=$lang?>">
@@ -12,34 +12,34 @@
 			</a>
 			<nav class="nav">
 				<ul class="menu">
-					<li class="active">
+					<li <?= ($this->request->params['controller']=='pages' && $this->request->params['action']=='index')? "class='active'" : "" ?>>
 						<a href="/<?=$lang?>">
-						Главная
+						<?=__('Главная')?>
 						</a>
 					</li>
-					<li>
+					<li <?= (isset($this->request->params['pass'][0]) && $this->request->params['pass'][0]=='about')? "class='active'" : "" ?>>
 						<a href="/<?=$lang?>page/about">
-						О компании
+						<?=__('О компании')?>
 						</a>
 					</li>
-					<li>
+					<li <?= ($this->request->params['controller']=='news')? "class='active'" : "" ?>>
 						<a href="/<?=$lang?>news">
-						Новости
+						<?=__('Новости')?>
 						</a>
 					</li>
-					<li>
+					<li <?= (isset($this->request->params['pass'][0]) && $this->request->params['pass'][0]=='investors')? "class='active'" : "" ?>>
 						<a href="/<?=$lang?>page/investors">
-						Инвесторам
+						<?=__('Инвесторам')?>
 						</a>
 					</li>
-					<li>
+					<li <?= (isset($this->request->params['pass'][0]) && $this->request->params['pass'][0]=='vacancy')? "class='active'" : "" ?>>
 						<a href="/<?=$lang?>page/vacancy">
-						Вакансии
+						<?=__('Вакансии')?>
 						</a>
 					</li>
-					<li>
+					<li <?= (isset($this->request->params['pass'][0]) && $this->request->params['pass'][0]=='contacts')? "class='active'" : "" ?>>
 						<a href="/<?=$lang?>page/contacts">
-						Контакты
+						<?=__('Контакты')?>
 						</a>
 					</li>
 				</ul>
@@ -47,7 +47,7 @@
 		</div>
 		<div class="animated fadeInUp">
 			<h1><span>Управляющая компания ASTANA N-TECH</span></h1>
-			<a class="h_more" href="#">Подробнее</a>
+			<a class="h_more" href="/<?=$lang?>page/about"><?=__('Подробнее')?></a>
 		</div>
 	</div>
 </header>
