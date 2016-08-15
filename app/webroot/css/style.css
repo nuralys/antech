@@ -105,10 +105,9 @@ header{
     height: 310px;
     background-position: center top;
     position: relative;
-    margin-bottom: 25px;
-    margin: 0 auto;
+    margin: 0 auto 25px auto;
     width: 100%;
-    max-width: 1470px;
+    max-width: 1900px;
 }
 header:after{
     content:"";
