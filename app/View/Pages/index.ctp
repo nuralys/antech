@@ -8,7 +8,7 @@
 			<div>
 				<a class="structure_sl" href="/<?=$lang?>companies/view/<?=$item['Company']['id']?>">
 					<figure class="img_scale">
-					<img class="sublogo1" src="/img/company/thumbs/<?=$item['Company']['img']?>">									
+					<img class="sublogo1" src="/img/company/<?=$item['Company']['img']?>">									
 					</figure>
 				</a>
 			</div> 
