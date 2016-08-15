@@ -10,7 +10,7 @@
 			<a class="logo" href="/<?=$lang?>">
 				<img src="/img/logo.png">
 			</a>
-			<nav>
+			<nav class="nav">
 				<ul class="menu">
 					<li class="active">
 						<a href="/<?=$lang?>">
