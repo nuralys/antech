@@ -1,4 +1,5 @@
 <?php
+App::uses('CakeEmail', 'Network/Email');
 
 class PagesController extends AppController {
 
@@ -112,6 +113,27 @@ class PagesController extends AppController {
 			$this->set(compact('page_id', 'data'));
 
 
+	}
+
+	public function request(){
+		$title_for_layout = __('Инвесторам');
+		$this->set(compact('title_for_layout'));
+
+		if( !empty($this->request->data) ){
+			$email = new CakeEmail('smtp');
+			$email->from(array('st-kotel.kz@yandex.ru' => 'Astana N-Tech'))
+			->to('st-kotel.kz@yandex.ru')
+			->subject('Новые письмо с сайта');
+			$message = 'ФИО: '. $this->request->data['Page']['fio'] . ' Телефон: '. $this->request->data['Page']['phone'] . ' Почта: ' . $this->request->data['Page']['email'] . ' Текст: ' . $this->request->data['Page']['body'];
+			if( $email->send($message) ){
+				$this->Session->setFlash('Письмо успешно отправлено', 'default', array(), 'good');
+				//unset($message);
+				return $this->redirect($this->referer());
+			}else{
+				$this->Session->setFlash('Ошибка!', 'default', array(), 'bad');
+				return $this->redirect($this->referer());
+			}
+		}
 	}
 
 }

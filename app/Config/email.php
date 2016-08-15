@@ -48,16 +48,16 @@ class EmailConfig {
 
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('site@localhost' => 'My Site'),
-		'host' => 'localhost',
-		'port' => 25,
+		'from' => array('st-kotel.kz@yandex.ru' => 'My Site'),
+		'host' => 'ssl://smtp.yandex.ru',
+		'port' => 465,
 		'timeout' => 30,
-		'username' => 'user',
-		'password' => 'secret',
+		'username' => 'st-kotel.kz@yandex.ru',
+		'password' => 'Kazakhstan123',
 		'client' => null,
 		'log' => false,
-		//'charset' => 'utf-8',
-		//'headerCharset' => 'utf-8',
+		'charset' => 'utf-8',
+		'headerCharset' => 'utf-8',
 	);
 
 	public $fast = array(

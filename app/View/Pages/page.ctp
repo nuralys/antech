@@ -11,27 +11,27 @@
 
 			<?php if(isset($this->request->params['pass'][0]) && $this->request->params['pass'][0] == 'investors'): ?>
 			<div class="form_part">
-				<form>
+				<form action="/pages/request" method="post" accept-charset="utf-8">
 					<fieldset>Связаться с нами</fieldset>
 					<div class="form_line">
 						<div class="form_row">
 							<div class="form_margin">
-								<input type="text" placeholder="Имя...">
+								<input type="text" name="data[Page][fio]" placeholder="Имя...">
 							</div>	
 						</div>
 						<div class="form_row">
 							<div class="form_margin">
-								<input type="text" placeholder="Почта...">
+								<input type="text" name="data[Page][email]" placeholder="Почта...">
 							</div>	
 						</div>
 						<div class="form_row">
 							<div class="form_margin">
-								<input type="text" placeholder="Номер...">
+								<input type="text" name="data[Page][phone]" placeholder="Номер...">
 							</div>	
 						</div>
 					</div>
 					<div class="form_text">
-						<textarea placeholder="Сообщение..."></textarea>
+						<textarea name="data[Page][body]" placeholder="Сообщение..."></textarea>
 					</div>
 					<div class="ov">
 						<button class="send_form" type="submit">Отправить</button>
