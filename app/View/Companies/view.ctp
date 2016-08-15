@@ -21,12 +21,26 @@
 </div>	
 <div class="sub_about">
 	<?php echo  $data['Company']['body'] ?>
+	<div class="center_btn">
 	<a class="btn" href="<?=$data['Company']['link']?>">Подробнее</a>
+	</div>
 </div>
 <div class="h_heading">
 	<h3>Контакты</h3>
 </div>
-<?=$data['Company']['map']?>
-<p><?=$data['Company']['address']?></p>
-<p><?=$data['Company']['phone']?></p>
-<p><?=$data['Company']['email']?></p>
+<div class="sub_contacts">	
+	<div class="map">
+		<?=$data['Company']['map']?>
+	</div>
+	<ul class="cont_list">
+		<li>
+			<p><?=$data['Company']['address']?></p>
+		</li>
+		<li>
+			<p><?=$data['Company']['phone']?></p>
+		</li>
+		<li>
+			<p><?=$data['Company']['email']?></p>
+		</li>	
+	</ul>
+</div>

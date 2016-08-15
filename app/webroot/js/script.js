@@ -54,8 +54,24 @@ $(document).ready(function(){
         $('.nav').addClass('mob_active');
     }                           
           }); 
+        
+    $(document).click(function(e){ 
+     var elem = $(".message");
+     if(e.target!=elem[0]&&!elem.has(e.target).length)
+        { 
+            elem.hide(); 
+        }
+    }); 
+    $('.message').append('<div class="close_message"></div>');
+$(document).on("click",".close_message", function(){ 
+    $('.message').hide();
+ });
+    $('.message:after').on('click', function () {
+        var elem = $(".message");
+        elem.hide();                                
+      });    
 
-
+        
      $('.slider').slick({
             speed: 500,
             autoplay: true,

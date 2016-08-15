@@ -529,7 +529,7 @@ header h1 span{
 .content p{
     font-size: 14px;
     margin: 0 0 12px 0;
-    line-height: 18px;
+    line-height: 1.5;
     text-indent: 10px;
 }
 .sub_contacts{
@@ -614,9 +614,11 @@ header h1 span{
 	margin-bottom:5px;
 }
 .form_part{
-	background-color:#f3f3f3;
-	padding:25px 40px;
-	margin-bottom:30px;
+        background-color: rgba(167, 162, 162, 0.11);
+    padding: 25px 40px;
+    margin-bottom: 30px;
+    margin: 20px 2px 15px 1px;
+    box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.12);
 }
 .form_part fieldset{
 	border:none;
@@ -647,7 +649,7 @@ header h1 span{
 	padding:0;
 	font-style:italic;
 	outline:none;
-	border:1px solid #f3f3f3;
+	border:1px solid #ebebeb;
 }
 .form_row input:focus,.form_text textarea:focus{
 	border:1px solid #ccc;
@@ -660,7 +662,7 @@ header h1 span{
 	height:85px;
 	resize:none;
 	font-style:italic;
-	border:1px solid #f3f3f3;
+	border:1px solid #ebebeb;
 	margin-bottom:25px;
 	outline:none;
 }
@@ -927,6 +929,33 @@ footer .fl_l span{
 }
 #delay8{
   animation-delay: 2.25s;
+}
+#goodMessage {
+    z-index: 10;
+    color: #fff;
+    position: relative;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #f89e1c;
+    margin-bottom: 15px;
+}
+.close_message{
+    position: absolute;
+    content: "";
+    top: 8px;
+    right: 13px;
+    cursor:pointer;
+    width: 28px;
+    border-radius: 50%;
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #7da9fe;
+    height: 28px;
+    background-image: url(../img/cancel.svg);
+}
+.close_message:hover{
+	background-color: #648bd7;
 }
 @media screen and (max-width: 1120px) {
 		.structure_slider {
