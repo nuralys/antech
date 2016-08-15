@@ -54,6 +54,7 @@
 				</div>	
 				<div class="sub_about">
 					<?php echo  $data['Company']['body'] ?>
+					<a class="btn" href="#">Подробнее</a>
 				</div>
 				<div class="h_heading">
 					<h3>Контакты</h3>
